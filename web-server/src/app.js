@@ -62,11 +62,11 @@ app.get('/weather', (req, res) => {
             error: 'Address is not provided'
         })
     } else {
-        geocode(address.toString(), (error, { latitude, longtitude, location }) => {
+        geocode(address, (error, { latitude, longtitude, location } = {}) => {
             if (error) {
                 return res.send({ error })
             } else {
-                forecast(latitude, longtitude, (error, forecastData)=> {
+                forecast(latitude, longtitude, (error, forecastData) => {
                     if (error) {
                         return res.send({ error })
                     }
