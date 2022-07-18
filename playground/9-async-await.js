@@ -13,9 +13,9 @@ const add = (a, b) => {
 const doWork = async () => {
     // throw new Error('Something went wrong')
     // return 'Kyunam'
-    const sum = await add(1, 99)
+    const sum = await add(1, -99)
     const sum2 = await add(sum, 58)
-    const sum3 = await add(sum2, 3)
+    const sum3 = await add(sum2, -3)
     return sum3
 }
 
