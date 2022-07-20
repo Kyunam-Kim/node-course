@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const taskSchema = new mongoose.Schema({
-    decription: {
+    description: {
         type: String,
         required: true,
         trim: true
